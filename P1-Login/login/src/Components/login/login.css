@@ -1,0 +1,372 @@
+
+@keyframes modeTransition {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+.login-container {
+    animation: modeTransition 0.5s ease; 
+}
+
+
+.light-mode .login-container {
+    background-color: #000000;
+    color: #000000; 
+}
+
+.light-mode .top-right-icon {
+    color: #000000;
+    transition: transform 0.4s ease-in-out;
+}
+
+@keyframes iconHoverAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.light-mode .top-right-icon:hover{
+    animation: iconHoverAnimation 0.5s ease;
+}
+
+.light-mode .background {
+    background: url("../../Assets/day.png") no-repeat center;
+    background-size: cover;
+    filter: blur(0.5px) 
+}
+
+.light-mode .input-box input {
+    border-color: #000000;
+}
+.light-mode .input-box input::placeholder {
+    border-color: #000000;
+    color: #000;
+}
+
+.light-mode .remember a {
+    color: #000000;
+}
+
+.light-mode .wrapper {
+    color: #000000;
+    border-color: #000000;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.155);
+}
+
+.light-mode .wrapper button {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.light-mode .icons > *:hover {
+    color: #000000;
+}
+
+.light-mode .register p a {
+    color: #000000;
+}
+
+.dark-mode .login-container {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .top-right-icon {
+    color: #fff;
+}
+
+.dark-mode .top-right-icon:hover{
+    animation: iconHoverAnimation 0.5s ease;
+}
+
+.dark-mode .background {
+    background: url("../../Assets/night.png") no-repeat center;
+    background-size: cover;
+    filter: blur(0.5px) 
+}
+
+.dark-mode .input-box input {
+    border-color: #ffffff;
+}
+
+.dark-mode .remember a {
+    color: #ffffff;
+}
+
+.dark-mode .wrapper {
+    color: #ffffff;
+    border-color: #fff;
+    box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 0.155);
+}
+
+.dark-mode .wrapper button {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.dark-mode .icons > *:hover {
+    color: #fff;
+}
+.dark-mode .register span{
+    font-weight: 700;
+    font-size: 16px;
+    color:black;
+}
+.dark-mode .register span:hover{
+    text-decoration: underline black;
+}
+.dark-mode .register p a {
+    color: #fff;
+}
+
+
+.top-right-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999; 
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.icons.rotate {
+    animation: rotateAnimation 0.5s ease forwards;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(0.5px);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper{
+    flex: 1;
+    width: 500px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2.5px solid rgb(255, 255, 255);
+    box-shadow: 0 5px 10px 5px rgba(255, 255, 255, 0.155);
+    background-color: rgba(255, 255, 255, 0.187);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2.5px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.input-box #ic{
+    cursor: pointer;
+}
+
+.wrapper .remember{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: -15px 0 15px;
+}
+
+.remember label input{
+    accent-color: rgb(255, 255, 255);
+    margin-right: 4px;
+}
+
+.remember a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.remember a:hover{
+    text-decoration: underline;
+}
+
+.wrapper button{
+    width: 100%;
+    height: 45px;
+    background: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(254, 254, 254, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper button:hover{
+    transform: scale(1.03);
+}
+.wrapper .para{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.wrapper .icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 25px;
+    padding-top: 30px;
+}
+.wrapper .icons > *:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+#icon1:hover{
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+#icon2:hover{
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+#icon3:hover{
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+.wrapper .register{
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register span{
+    padding-left: 5px;
+    color:white;
+    font-size: 16px;
+}
+
+.register p a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.register p a:hover{
+    color: white;
+    text-decoration: underline white;
+}
+
+
+/* RESPONSIVE SITE */
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+    .background{
+        background-size: cover;
+    }
+
+    .input-box input {
+        padding: 15px 30px 15px 15px;
+        font-size: 14px;
+    }
+
+    .wrapper h1 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 576px) {
+    .wrapper {
+        width: 100%;
+        padding: 15px;
+    }
+    .background{
+        background-size: contain;
+    }
+
+    .input-box input {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .wrapper h1 {
+        font-size: 26px;
+    }
+}
