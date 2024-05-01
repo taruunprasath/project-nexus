@@ -1,0 +1,114 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FA6400;
+    padding: 10px 40px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo p {
+    color: #FA6400;
+    font-size: 35px;
+    font-family: "Cinzel", serif;
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-self: center;
+    padding-left: 400px; 
+  }
+  
+  .nav-menu ul li {
+    margin-right: 10px;
+    font-family: "Cinzel", serif;
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+  .nav-menu ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #FA6400;
+  }
+  
+  .link:hover,
+  .active {
+    font-weight: bold;
+    border-bottom: 2px solid #FE9E0D;
+  }
+  
+  .nav-button .btn {
+    margin-left: 40px;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    font-family: "Cinzel", serif;
+  }
+  
+  #loginBtn:hover {
+    background-color: #fa6400;
+    box-shadow: 0px 15px 20px rgba(231, 146, 62, 0.45);
+    color: #fff;
+    font-weight: bold;
+    transform: translateY(-7px);
+  }
+  
+  #loginBtn:active {
+    transform: translateY(-1px);
+  }
+  
+  #signupBtn:hover {
+    background-color: #fa6400;
+    font-weight: bold;
+    box-shadow: 0px 15px 20px rgba(231, 146, 62, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  #signupBtn:active {
+    transform: translateY(-1px);
+  }
+  
+  .nav-menu-btn {
+    display: none;
+  }
+  
+  .nav-menu-btn svg {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+    }
+  
+    .nav-menu-btn {
+      display: block;
+    }
+  }
+  

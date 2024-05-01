@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation-name: slideLeft;
+}
+
+.slide-right {
+  animation-name: slideRight;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("../../Assets/cover.jpg") no-repeat ;
+  background-size: cover;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.quoute {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 100px;
+  z-index: -1;
+  margin-left: 30px;
+  padding: 20px 40px;
+}
+.quoute p{
+  color: white;
+  font-size:40px;
+  font-weight: bolder;
+  font-style: italic;
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+}
+.quoute #para{
+  color: #FA6400;
+  font-size: 80px;
+  font-weight: bolder;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh; 
+  padding-left: 600px;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+.wrapper {
+  flex: 1;
+  max-width: 500px; 
+  color: #fff; 
+  border-radius: 10px;
+  padding: 30px 40px;
+  border: 2.5px solid #C9C9C9; 
+  box-shadow: 0 5px 10px 5px #c9c9c928;
+  background-color: #191919;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.wrapper .input-box {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000; 
+  padding: 20px 45px 20px 20px;
+  
+}
+
+.input-box input::placeholder {
+  color: #000000; 
+  font-weight: bold;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000; 
+  cursor: pointer;
+}
+
+.wrapper .remember {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: -15px 0 15px;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.remember label input {
+  accent-color: #fff; 
+  margin-right: 4px;
+}
+
+.remember a {
+  color: #fff; 
+  text-decoration: none;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+}
+
+.wrapper button {
+  width: 100%;
+  height: 45px;
+  background: #FA6400; 
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(254, 254, 254, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.wrapper button:hover {
+  transform: scale(1.03);
+}
+
+.wrapper .para {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.wrapper .icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 25px;
+  padding-top: 30px;
+  
+}
+
+.wrapper .icons > *:hover {
+  transform: scale(1.2);
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.icons .icon {
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 3px solid #FA6400;
+}
+.icons #icon2{
+  color: #0866FF;
+ }
+ .icons #icon3{
+  color: #000000;
+}
+
+.icons .icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.wrapper .register {
+  font-size: 15px;
+  text-align: center;
+  margin: 20px 0 15px;
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.register span {
+  padding-left: 5px;
+  color: #FA6400; 
+  font-size: 16px;
+}
+
+.register p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.register p a:hover {
+  color: #fff; 
+  text-decoration: underline;
+}

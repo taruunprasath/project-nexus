@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+.footer-wrapper {
+    margin: 6rem 0rem;
+    display: flex;
+    margin-top: 10rem;
+  }
+  .footer-logo-container {
+    display: flex;
+    color: #000000;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+  }
+  .footer-icons {
+    margin-top: 0.5rem;
+  
+  
+  }
+  .footer-icons svg {
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+    color: #000000;
+  }
+  
+  .footer-section-two {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer-section-columns {
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+  }
+  .footer-section-columns span, a {
+    margin: 0.25rem 0rem;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .footer-section-columns span:hover,
+.footer-section-columns a:hover {
+  color: #000000; 
+  text-decoration: underline; 
+}
