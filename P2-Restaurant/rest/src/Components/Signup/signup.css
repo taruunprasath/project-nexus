@@ -233,3 +233,37 @@
   color: #fff; 
   text-decoration: underline;
 }
+
+
+@media (max-width: 1200px) {
+  .signup-container {
+    padding-left: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .signup-container {
+    padding-left: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    padding-left: 100px;
+  }
+
+  .quoute {
+    padding-left: 30px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .quoute {
+    display: none;
+  }
+
+  .signup-container {
+    padding-left: 50px;
+  }
+}

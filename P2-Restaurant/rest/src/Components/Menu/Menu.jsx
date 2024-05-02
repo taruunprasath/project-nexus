@@ -18,7 +18,7 @@ const Menu = () => {
                     <div className="home-container">
                     <div className="home-banner-container">
                     <div className="home-text-section">
-                    <h1 className="primary-heading1">
+                    <h1 className="primary-heading1" id="primary">
                     Indian
                     </h1>
                     <p className="primary-text">
@@ -37,7 +37,7 @@ const Menu = () => {
                     <div className="home-container">
                     <div className="home-banner-container">
                     <div className="home-text-section">
-                    <h1 className="primary-heading1">
+                    <h1 className="primary-heading1" id="primary">
                     American
                     </h1>
                     <p className="primary-text">
@@ -56,7 +56,7 @@ const Menu = () => {
                     <div className="home-container">
                     <div className="home-banner-container">
                     <div className="home-text-section">
-                    <h1 className="primary-heading1">
+                    <h1 className="primary-heading1" id="primary">
                     British
                     </h1>
                     <p className="primary-text">
@@ -75,7 +75,7 @@ const Menu = () => {
                     <div className="home-container">
                     <div className="home-banner-container">
                     <div className="home-text-section">
-                    <h1 className="primary-heading1">
+                    <h1 className="primary-heading1" id="primary">
                     Chinese
                     </h1>
                     <p className="primary-text">
@@ -94,7 +94,7 @@ const Menu = () => {
                     <div className="home-container">
                     <div className="home-banner-container">
                     <div className="home-text-section">
-                    <h1 className="primary-heading1">    
+                    <h1 className="primary-heading1" id="primary">    
                     Thai
                     </h1>
                     <p className="primary-text">

@@ -44,8 +44,11 @@ img {
   }
   
   .primary-heading1 {
-    color: #FA6400;
+    color: #fa0000;
     
+  }
+  #primary{
+    color: rgb(255, 0, 157);
   }
   
   .primary-heading2 {

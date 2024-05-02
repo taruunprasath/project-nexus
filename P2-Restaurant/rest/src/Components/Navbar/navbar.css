@@ -91,6 +91,18 @@
   #signupBtn:active {
     transform: translateY(-1px);
   }
+
+  #logBtn:hover {
+    background-color: #fa6400;
+    font-weight: bold;
+    box-shadow: 0px 15px 20px rgba(231, 146, 62, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  #logBtn:active {
+    transform: translateY(-1px);
+  }
   
   .nav-menu-btn {
     display: none;

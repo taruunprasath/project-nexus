@@ -8,10 +8,12 @@ import Menu from './Components/Menu/Menu';
 import Food from './Components/Food/Food';
 import Footer from './Components/Footer/Footer';
 import About from './Components/About/About';
+import { AuthProvider } from './Components/AuthContext';
 
 function App() {
   return (
     <BrowserRouter>
+    <AuthProvider>
     <div>
     <ToastContainer />
     <Routes>
@@ -25,6 +27,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
     </Routes>
     </div>
+    </AuthProvider>
     </BrowserRouter>
   );
 }

@@ -1,3 +1,4 @@
+// Login.js
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from '../Navbar/Navbar';
@@ -8,10 +9,12 @@ import { FaXTwitter } from "react-icons/fa6";
 import '../Login/login.css';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
+import { useAuth } from '../../Components/AuthContext';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const { login } = useAuth();
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
     const location = useLocation();
@@ -23,8 +26,8 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            await signInWithEmailAndPassword(auth, email, password);
-            alert("Login Successful");
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            login(userCredential.user);
             console.log("Login Successful");
             navigate("/home");
         } catch (error) {
