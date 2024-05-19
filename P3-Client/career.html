@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techy Softwares</title>
+    <meta name="title" content="Techy Software">
+    <meta name="description" content="This is a software company">
+
+    <link rel="icon" href="./Assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <script src="index.js"></script>
+
+    <section class="sub-header1">
+        <nav>
+            <a href="index.html"><img src="./Assets/Logo.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/career.html">Career</a></li>
+                    <li><a href="/service.html">Services</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>CAREER</h1>
+    </section>
+    <section class="career">
+        <h2>Part Time/Contract/Full Time Opportunities</h2>
+        <h1>WE ARE HIRING</h1>
+    
+        <div class="row">
+            <div class="career-col">
+                <img src="./Assets/ui-ux.png" alt="" />
+                <h3>UI/UX <br>Designer</h3>
+                <p>Part Time</p>
+                <a href="#" class="know">Apply Now</a>
+            </div>
+            <div class="career-col">
+                <img src="./Assets/devops.png" alt="" />
+                <h3>DevOps <br>Engineer</h3>
+                <p>Full-Time</p>
+                <a href="#" class="know">Apply Now</a>
+            </div>
+            <div class="career-col">
+                <img src="./Assets/backend.png" alt="" />
+                <h3>Backend Developer</h3>
+                <p>Contract</p>
+                <a href="#" class="know">Apply Now</a>
+            </div>
+        </div>
+    </section>    
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const careerCols = document.querySelectorAll('.career-col');
+    
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+    
+            careerCols.forEach(col => {
+                observer.observe(col);
+            });
+        });
+    </script>
+    
+         <section class="footer section">
+            <div class="row1">
+                <div class="col">
+                    <img src="./Assets/Logo.png" alt=""/>
+                    <p>Join our community today and subscribe to stay updated with the latest tech trends, exclusive offers, 
+                        and innovative software solutions tailored just for you!</p>
+                </div>
+                <div class="col" id="col">
+                    <h3>OFFICE <div class="underline"><span></span></div></h3>
+                    <p>TechySoftware Pvt. Ltd.</p>
+                    <p>Tech Park Road, Sector 21</p>
+                    <p>Bangalore, Karnataka 560001, India</p>
+                    <p class="email-id">contact@techysoftware.in </p>
+                </div>
+                <div class="col">
+                    <h3>LINKS <div class="underline"><span></span></div></h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/career.html">Career</a></li>
+                        <li><a href="/service.html">Services</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col" id="col1">
+                    <h3>NEWSLETTER <div class="underline"><span></span></div></h3>
+                    <form>
+                        <input type="text" name="name" placeholder="Enter Your Name" required />
+                        <input type="tel" name="mobile" placeholder="Enter Your Mobile Number" required />
+                        <input type="email" name="email" placeholder="Enter Your Email ID" required />
+                        <button type="submit">Subscribe</button>
+                    </form>               
+                    <div class="social-media">
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <p class="copy">Techy Softwares &#169; 2024 - All Rights Reserved </p>
+         </section>
+         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll('.section');
+    
+                const options = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+    
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('reveal');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, options);
+    
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            });
+        </script>
+</body>
+</html>

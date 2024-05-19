@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techy Softwares</title>
+    <meta name="title" content="Techy Software">
+    <meta name="description" content="This is a software company">
+
+    <link rel="icon" href="./Assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <script src="index.js"></script>
+
+    <section class="sub-header3">
+        <nav>
+            <a href="index.html"><img src="./Assets/Logo.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/career.html">Career</a></li>
+                    <li><a href="/service.html">Services</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>CONTACT US</h1>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textBox = document.querySelector('.text-box');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            observer.observe(textBox);
+        });
+    </script>
+    <section class="contact-us section">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>Tech Park Road, Sector 21</h5>
+                        <p>Bangalore, Karnataka 560001, India</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+1 323 577 2038</h5>
+                        <p>Monday to Saturday</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>
+                        <h5>contact@techysoftwares.in</h5>
+                        <p>Email if you have any queries</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <h1>Your Critique</h1>
+                <form action="/post" method="post">
+                    <input type="text" name="name" placeholder="Enter your Name" required>
+                    <input type="email" name="email" placeholder="Enter your Email" required>
+                    <input type="text" name="subject" placeholder="Enter your Subject" required>
+                    <textarea rows="4" name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="hero-btn3">SEND MESSAGE</button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+         <section class="footer section">
+            <div class="row1">
+                <div class="col">
+                    <img src="./Assets/Logo.png" alt=""/>
+                    <p>Join our community today and subscribe to stay updated with the latest tech trends, exclusive offers, 
+                        and innovative software solutions tailored just for you!</p>
+                </div>
+                <div class="col" id="col">
+                    <h3>OFFICE <div class="underline"><span></span></div></h3>
+                    <p>TechySoftware Pvt. Ltd.</p>
+                    <p>Tech Park Road, Sector 21</p>
+                    <p>Bangalore, Karnataka 560001, India</p>
+                    <p class="email-id">contact@techysoftware.in </p>
+                </div>
+                <div class="col">
+                    <h3>LINKS <div class="underline"><span></span></div></h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/career.html">Career</a></li>
+                        <li><a href="/service.html">Services</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col" id="col1">
+                    <h3>NEWSLETTER <div class="underline"><span></span></div></h3>
+                    <form>
+                        <input type="text" name="name" placeholder="Enter Your Name" required />
+                        <input type="tel" name="mobile" placeholder="Enter Your Mobile Number" required />
+                        <input type="email" name="email" placeholder="Enter Your Email ID" required />
+                        <button type="submit">Subscribe</button>
+                    </form>               
+                    <div class="social-media">
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <p class="copy">Techy Softwares &#169; 2024 - All Rights Reserved </p>
+         </section>
+         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll('.section');
+    
+                const options = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+    
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('reveal');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, options);
+    
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            });
+        </script>
+</body>
+</html>
