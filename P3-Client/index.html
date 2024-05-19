@@ -23,7 +23,7 @@
 
     <section class="header">
         <nav>
-            <a href="i"><img src="./Assets/Logo.png" alt="Logo"></a>
+            <a href="#"><img src="./Assets/Logo.png" alt="Logo"></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul>
@@ -67,6 +67,30 @@
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const careerCols = document.querySelectorAll('.choose-col');
+    
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+    
+            careerCols.forEach(col => {
+                observer.observe(col);
+            });
+        });
+    </script>
     <section class="projects section">
         <h1>OUR PROJECTS</h1>
         <p id="p">Represent a diverse array of tech initiatives pursued by our company, showcasing our commitment to innovation and impactful solutions.</p>
@@ -91,6 +115,30 @@
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const projectsCols = document.querySelectorAll('.projects-col');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    projectsCols.forEach(col => {
+        observer.observe(col);
+    });
+});
+    </script>
     <section class="tech section">
         <h1>TECHNICAL STACKS</h1>
         <p>We meticulously tailor each project by selecting the optimal platform/technology<br> and assembling a dedicated team comprising designers, solution specialists, developers, and testers.</p>
@@ -138,60 +186,189 @@
             </div>
         </div>
     </section>
-    <section class="testimonials section">
-        <h1>WHAT OUR CLIENTS SAY</h1>
-        <p>Our clients' testimonials reflect their satisfaction with our tech solutions and services. They highlight the positive experiences and successful outcomes achieved through our collaboration.</p>
-        <div class="row">
-            <div class="testimonials-col">
-                <img src="./Assets/pro1.jpg" alt="Kevin Lu"/>
-                <div>
-                    <p>The team at Techy Softwares exceeded our expectations with their innovative solutions and dedicated support. Our business website not only looks amazing but also functions flawlessly. Highly recommended!</p>
-                    <h3>Kevin Lu</h3>
-                    <p>Vortex Dynamics</p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-            </div>
-            <div class="testimonials-col">
-                <img src="./Assets/pro2.jpg" alt="Monique Kane"/>
-                <div>
-                    <p>Our experience with the team was fantastic. Their innovative approach and timely delivery of our e-commerce platform were remarkable. We saw a significant boost in our online sales. Truly, a top-notch service!</p>
-                    <h3>Monique Kane</h3>
-                    <p>StyleHaven Boutique</p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-alt"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="footer">
-        <h1>Let's Create Something Special Together</h1>
-        <a href="contact.html" class="hero-btn">Contact Us</a>
-        <div class="icons">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
-        <p>&copy; 2023 Techy Softwares. All rights reserved.</p>
-    </section>
-
     <script>
-        const navLinks = document.getElementById("navLinks");
+        document.addEventListener("DOMContentLoaded", function () {
+            const workingCols = document.querySelectorAll('.working-col');
 
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-        }
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            workingCols.forEach(col => {
+                observer.observe(col);
+            });
+        });
+    </script>
+     <section class="testimonals section">
+        <h3>TESTIMONALS</h3>
+        <h1>WHAT THEY EXPRESS?</h1>
+        <p>Testimonials from our clients highlight their positive experiences, 
+            showcasing satisfaction and trust in our services. 
+        </p>
+
+        <div class="row">
+            <div class="testimonals-col">
+                <img src="./Assets/pro1.jpg" alt=""/>
+                <div>
+                    <p>The software development team exceeded our expectations, 
+                        delivering a robust web application ahead of schedule. 
+                        Their attention to detail and dedication are unmatched. 
+                        We highly recommend their services for any web development needs!</p>
+                        <h3>Travis George</h3>
+                        <p>SoftSolutions Co.</p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonals-col">
+                <img src="./Assets/pro2.jpg" alt=""/>
+                <div>
+                    <p>Their professionalism and technical expertise were evident from day one. 
+                        We've seen significant improvements in our web platform thanks to their innovative solutions.
+                        The process was seamless, making them our go-to web development partner</p>
+                    <h3>Sophie Casey</h3>
+                    <p>ApexCode Innovations</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                </div>
+            </div>
+        </div>
+     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const testimonialsCols = document.querySelectorAll('.testimonials-col');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    testimonialsCols.forEach(col => {
+        observer.observe(col);
+    });
+});
+    </script>
+      <section class="cta">
+        <h1>Revolutionize Your Workflow with Techy Software Innovations!</h1>
+        <a href="" class="hero-btn1">CONTACT US</a>
+     </section>
+    <section class="footer section">
+        <div class="row1">
+            <div class="col">
+                <img src="./Assets/Logo.png" alt=""/>
+                <p>Join our community today and subscribe to stay updated with the latest tech trends, exclusive offers, 
+                    and innovative software solutions tailored just for you!</p>
+            </div>
+            <div class="col" id="col">
+                <h3>OFFICE <div class="underline"><span></span></div></h3>
+                <p>TechySoftware Pvt. Ltd.</p>
+                <p>Tech Park Road, Sector 21</p>
+                <p>Bangalore, Karnataka 560001, India</p>
+                <p class="email-id">contact@techysoftware.in </p>
+            </div>
+            <div class="col">
+                <h3>LINKS <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/career.html">Career</a></li>
+                    <li><a href="/service.html">Services</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col" id="col1">
+                <h3>NEWSLETTER <div class="underline"><span></span></div></h3>
+                <form>
+                    <input type="text" name="name" placeholder="Enter Your Name" required />
+                    <input type="tel" name="mobile" placeholder="Enter Your Mobile Number" required />
+                    <input type="email" name="email" placeholder="Enter Your Email ID" required />
+                    <button type="submit">Subscribe</button>
+                </form>               
+                <div class="social-media">
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+
+                </div>
+            </div>
+            
+        </div>
+        <hr>
+        <p class="copy">Techy Softwares &#169; 2024 - All Rights Reserved </p>
+     </section>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll('.section');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const textBox = document.querySelector('.text-box');
+
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            observer.observe(textBox);
+        });
     </script>
 </body>
 </html>

@@ -659,14 +659,19 @@ h3 {
 
 .social-media {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   margin-top: 20px;
 }
 
-.social-media i {
+.social-media i { 
+  margin-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 15px;
   font-size: 20px;
-  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
 }
+
 @media (max-width: 700px) {
   #col1 {
     flex-basis: calc(100% - 20px);
